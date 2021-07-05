@@ -91,25 +91,24 @@
 
 // MARK:- Control actions
 - (void)authorizeButtonTapped:(UIButton *)sender {
-	BOOL authorized = YES;
 	NSString *authorizeLogin = @"username";
-	if (![self.loginField.text isEqualToString:authorizeLogin]) {
-		authorized = NO;
+	NSString *authorizePassword = @"password";
+	
+	BOOL loginSuccess = [self.loginField.text isEqualToString:authorizeLogin];
+	BOOL passSuccess = [self.passwordField.text isEqualToString:authorizePassword];
+	if (loginSuccess) {
+		self.loginField.status = RSTextFieldSuccess;
+	} else {
 		self.loginField.status = RSTextFieldError;
 	}
-	
-	NSString *authorizePassword = @"password";
-	if (![self.passwordField.text isEqualToString:authorizePassword]) {
-		authorized = NO;
+	if (passSuccess) {
+		self.passwordField.status = RSTextFieldSuccess;
+	} else {
 		self.passwordField.status = RSTextFieldError;
 	}
-	
-	if (!authorized) {
+	if (!loginSuccess || !passSuccess) {
 		return;
 	}
-	
-	self.loginField.status = RSTextFieldSuccess;
-	self.passwordField.status = RSTextFieldSuccess;
 	
 	[self showPinPad];
 }
