@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="authorizeButton" destination="cZb-dx-OMv" id="cvP-jm-gpW"/>
+                <outlet property="bottomContraintDefault" destination="Cmd-qc-VoZ" id="ZXK-d5-bYG"/>
+                <outlet property="bottomContraintWithKB" destination="UD0-ZG-dyR" id="GNZ-B8-Plf"/>
+                <outlet property="loginField" destination="tJ5-If-qLL" id="SKp-Le-tDZ"/>
+                <outlet property="passwordField" destination="vah-zS-HfU" id="6qt-JR-AMg"/>
+                <outlet property="securePin1" destination="B3x-OJ-WR7" id="I4a-ux-FY6"/>
+                <outlet property="securePin2" destination="IOC-SM-tS1" id="A8q-b1-Zj4"/>
+                <outlet property="securePin3" destination="Dfr-fm-rH9" id="yiw-gB-YRB"/>
+                <outlet property="secureTitle" destination="Njb-Tp-8cJ" id="7jH-VJ-iUJ"/>
+                <outlet property="secureView" destination="vmn-VU-3UZ" id="JcW-HG-94W"/>
+                <outlet property="titleLabel" destination="eRW-eP-tHH" id="dCL-3U-OpH"/>
+                <outlet property="topContraint" destination="lq1-AH-oCN" id="GQk-uc-kvi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSScool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eRW-eP-tHH">
+                    <rect key="frame" x="117" y="80" width="141" height="43"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJ5-If-qLL" customClass="RSTextField">
+                    <rect key="frame" x="36" y="240" width="303" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" textContentType="username"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vah-zS-HfU" customClass="RSTextField">
+                    <rect key="frame" x="36" y="304" width="303" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZb-dx-OMv" customClass="RSAuthorizeButton">
+                    <rect key="frame" x="109.5" y="398" width="156" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="3FF-MZ-wbD"/>
+                        <constraint firstAttribute="width" constant="156" id="k9i-OI-GLz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="tintColor" name="littleBoyBlue"/>
+                    <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                    <state key="normal" title="Authorize">
+                        <color key="titleColor" name="littleBoyBlue"/>
+                        <imageReference key="image" image="person" catalog="system" renderingMode="template"/>
+                    </state>
+                    <state key="highlighted" image="person.fill" catalog="system"/>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmn-VU-3UZ" customClass="RSPinPadView">
+                    <rect key="frame" x="69.5" y="507" width="236" height="110"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njb-Tp-8cJ">
+                            <rect key="frame" x="114" y="15" width="8.5" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3x-OJ-WR7" customClass="RSPinButton">
+                            <rect key="frame" x="23" y="45" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="5lm-wV-XxZ"/>
+                                <constraint firstAttribute="height" constant="50" id="U7U-LM-Jp3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <state key="normal" title="1">
+                                <color key="titleColor" name="littleBoyBlue"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOC-SM-tS1" customClass="RSPinButton">
+                            <rect key="frame" x="93" y="45" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="QoO-eT-lr4"/>
+                                <constraint firstAttribute="height" constant="50" id="gcr-tr-vv1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <state key="normal" title="2">
+                                <color key="titleColor" name="littleBoyBlue"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfr-fm-rH9" customClass="RSPinButton">
+                            <rect key="frame" x="163" y="45" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="CJW-Y3-aIx"/>
+                                <constraint firstAttribute="height" constant="50" id="TnH-C2-BHo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <state key="normal" title="3">
+                                <color key="titleColor" name="littleBoyBlue"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Dfr-fm-rH9" firstAttribute="centerY" secondItem="IOC-SM-tS1" secondAttribute="centerY" id="3WZ-iC-QKM"/>
+                        <constraint firstAttribute="bottom" secondItem="IOC-SM-tS1" secondAttribute="bottom" constant="15" id="DUP-TA-sUN"/>
+                        <constraint firstItem="B3x-OJ-WR7" firstAttribute="leading" secondItem="vmn-VU-3UZ" secondAttribute="leading" constant="23" id="Fgp-mA-72n"/>
+                        <constraint firstItem="Njb-Tp-8cJ" firstAttribute="top" secondItem="vmn-VU-3UZ" secondAttribute="top" constant="15" id="Rcv-L2-ofr"/>
+                        <constraint firstItem="IOC-SM-tS1" firstAttribute="leading" secondItem="B3x-OJ-WR7" secondAttribute="trailing" constant="20" id="a00-bP-FXx"/>
+                        <constraint firstItem="IOC-SM-tS1" firstAttribute="centerX" secondItem="vmn-VU-3UZ" secondAttribute="centerX" id="agn-Fe-D69"/>
+                        <constraint firstItem="Dfr-fm-rH9" firstAttribute="leading" secondItem="IOC-SM-tS1" secondAttribute="trailing" constant="20" id="bXN-QL-3Bq"/>
+                        <constraint firstItem="B3x-OJ-WR7" firstAttribute="centerY" secondItem="IOC-SM-tS1" secondAttribute="centerY" id="omB-Rr-qpB"/>
+                        <constraint firstItem="IOC-SM-tS1" firstAttribute="top" secondItem="vmn-VU-3UZ" secondAttribute="top" constant="45" id="rMJ-l4-AnY"/>
+                        <constraint firstAttribute="trailing" secondItem="Dfr-fm-rH9" secondAttribute="trailing" constant="23" id="vof-oI-jvA"/>
+                        <constraint firstItem="Njb-Tp-8cJ" firstAttribute="centerX" secondItem="vmn-VU-3UZ" secondAttribute="centerX" id="yqB-qa-oXs"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vah-zS-HfU" firstAttribute="top" secondItem="tJ5-If-qLL" secondAttribute="bottom" constant="30" id="0OV-My-4Xx"/>
+                <constraint firstItem="cZb-dx-OMv" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="2JO-yD-0QL"/>
+                <constraint firstItem="vah-zS-HfU" firstAttribute="leading" secondItem="tJ5-If-qLL" secondAttribute="leading" id="2tQ-iR-r0P"/>
+                <constraint firstItem="cZb-dx-OMv" firstAttribute="top" secondItem="vah-zS-HfU" secondAttribute="bottom" constant="60" id="CaX-QK-dun"/>
+                <constraint firstItem="cZb-dx-OMv" firstAttribute="bottom" secondItem="vmn-VU-3UZ" secondAttribute="top" constant="-67" id="Cmd-qc-VoZ"/>
+                <constraint firstItem="vmn-VU-3UZ" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="NMj-aq-3lj"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cZb-dx-OMv" secondAttribute="bottom" constant="20" id="UD0-ZG-dyR"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="vmn-VU-3UZ" secondAttribute="bottom" constant="50" id="V9F-8p-L1G"/>
+                <constraint firstItem="tJ5-If-qLL" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="36" id="XNe-sf-HIj"/>
+                <constraint firstItem="eRW-eP-tHH" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="dMU-aa-9N8"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="tJ5-If-qLL" secondAttribute="trailing" constant="36" id="g58-I8-KWh"/>
+                <constraint firstItem="vah-zS-HfU" firstAttribute="trailing" secondItem="tJ5-If-qLL" secondAttribute="trailing" id="hCb-bm-4iB"/>
+                <constraint firstItem="eRW-eP-tHH" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="80" id="lq1-AH-oCN"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="UD0-ZG-dyR"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="8.6956521739130448" y="75.669642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <namedColor name="littleBoyBlue">
+            <color red="0.50196078431372548" green="0.64313725490196083" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
