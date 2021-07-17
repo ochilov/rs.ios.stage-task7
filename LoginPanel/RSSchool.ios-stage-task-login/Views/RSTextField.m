@@ -44,7 +44,6 @@
 	}
 	_status = status;
 	UIColor *borderColor = nil;
-	CGFloat alphaValue = 1.0;
 	switch (_status) {
 		case RSTextFieldReady:
 			borderColor = [UIColor colorNamed:@"blackCoral"];
@@ -56,12 +55,16 @@
 			
 		case RSTextFieldSuccess:
 			borderColor = [UIColor colorNamed:@"turquoiseGreen"];
-			alphaValue = 0.5;
 			break;
 	}
 	
 	self.layer.borderColor = borderColor.CGColor;
-	self.alpha = alphaValue;
+}
+
+- (void)setEnabled:(BOOL)enabled {
+	[super setEnabled:enabled];
+	
+	self.alpha = enabled ? 1.0 : 0.5;
 }
 
 @end

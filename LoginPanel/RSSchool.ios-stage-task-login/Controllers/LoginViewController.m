@@ -125,16 +125,17 @@
 	// add code
 	if ([self.secureTitle.text isEqualToString:@"-"]) {
 		self.secureTitle.text = @"";
-	} else if (self.secureTitle.text.length == _pinLength) {
+	} else if (self.secureTitle.text.length == _pinLength*2) {
 		self.secureTitle.text = @"";
 		self.secureView.status = RSPinPadDefault;
 	}
-	self.secureTitle.text = [self.secureTitle.text stringByAppendingFormat:@"%ld", sender.tag];
+	self.secureTitle.text = [self.secureTitle.text stringByAppendingFormat:@"%ld ", sender.tag];
 	
 	// check code
 	const NSInteger securePin = 132;
-	if (self.secureTitle.text.length == _pinLength) {
-		if (self.secureTitle.text.integerValue == securePin) {
+	NSString *pinCodeStr = [self.secureTitle.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+	if (pinCodeStr.length == _pinLength) {
+		if (pinCodeStr.integerValue == securePin) {
 			[self secureCodeSuccess];
 		} else if (_secureAttempts++ < _secureAttemptsMax) {
 			[self secureCodeFail];
@@ -180,7 +181,7 @@
 	typeof(self) __weak weakSelf = self;
 	UIAlertAction* actionOK = [UIAlertAction
 		actionWithTitle:@"Refresh"
-		style:UIAlertActionStyleDefault
+		style:UIAlertActionStyleDestructive
 		handler:^(UIAlertAction * _Nonnull action) {
 			[weakSelf startLogin];
 	}];

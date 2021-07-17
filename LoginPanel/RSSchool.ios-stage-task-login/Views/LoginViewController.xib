@@ -42,12 +42,12 @@
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJ5-If-qLL" customClass="RSTextField">
                     <rect key="frame" x="36" y="240" width="303" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" textContentType="username"/>
+                    <textInputTraits key="textInputTraits" keyboardType="alphabet" textContentType="username"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vah-zS-HfU" customClass="RSTextField">
                     <rect key="frame" x="36" y="304" width="303" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZb-dx-OMv" customClass="RSAuthorizeButton">
                     <rect key="frame" x="109.5" y="398" width="156" height="42"/>
@@ -58,12 +58,12 @@
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <color key="tintColor" name="littleBoyBlue"/>
                     <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                     <state key="normal" title="Authorize">
                         <color key="titleColor" name="littleBoyBlue"/>
-                        <imageReference key="image" image="person" catalog="system" renderingMode="template"/>
+                        <imageReference key="image" image="auth" renderingMode="template"/>
                     </state>
-                    <state key="highlighted" image="person.fill" catalog="system"/>
+                    <state key="highlighted" image="auth-fill"/>
                 </button>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmn-VU-3UZ" customClass="RSPinPadView">
                     <rect key="frame" x="69.5" y="507" width="236" height="110"/>
@@ -81,6 +81,7 @@
                                 <constraint firstAttribute="height" constant="50" id="U7U-LM-Jp3"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <color key="tintColor" name="littleBoyBlue"/>
                             <state key="normal" title="1">
                                 <color key="titleColor" name="littleBoyBlue"/>
                             </state>
@@ -92,6 +93,7 @@
                                 <constraint firstAttribute="height" constant="50" id="gcr-tr-vv1"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <color key="tintColor" name="littleBoyBlue"/>
                             <state key="normal" title="2">
                                 <color key="titleColor" name="littleBoyBlue"/>
                             </state>
@@ -103,6 +105,7 @@
                                 <constraint firstAttribute="height" constant="50" id="TnH-C2-BHo"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <color key="tintColor" name="littleBoyBlue"/>
                             <state key="normal" title="3">
                                 <color key="titleColor" name="littleBoyBlue"/>
                             </state>
@@ -150,8 +153,8 @@
         </view>
     </objects>
     <resources>
-        <image name="person" catalog="system" width="128" height="117"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="auth" width="14" height="15"/>
+        <image name="auth-fill" width="15" height="17"/>
         <namedColor name="littleBoyBlue">
             <color red="0.50196078431372548" green="0.64313725490196083" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
